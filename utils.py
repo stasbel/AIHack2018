@@ -24,6 +24,8 @@ def parse_diag_code(diag_code,
 
 def get_disease_class(diag_code):
     letter, code, subcode = parse_diag_code(diag_code)
+    letter = str(letter)
+    code = int(code)
 
     class_ranges = [
         ("A", 0),      #1
@@ -59,3 +61,5 @@ def get_disease_class(diag_code):
     for i in range(len(class_ranges)):
         if (letter, code) < class_ranges[i]:
             return i
+
+    return "NaN"
