@@ -8,11 +8,12 @@ def normalize_attribute(attr, keys):
             return "NaN"
     return attr
 
+
 def df_normalize_allergies(df):
     keys = ["nan", "отрицает", "не отягощен", "без дополнений"]
-    new_data = df
-    new_data.allergies = new_data.allergies.map(lambda x: normalize_attribute(x, keys))
-    return new_data
+    df.allergies = df.allergies.map(lambda x: normalize_attribute(x, keys))
+    return df
+
 
 def parse_diag_code(diag_code,
                     dc_pattern=re.compile('([A-Z])?([0-9][0-9])?(\.([0-9]))?')):
@@ -21,6 +22,7 @@ def parse_diag_code(diag_code,
     code = int(code) if code is not None else None
     subcode = int(subcode) if subcode is not None else None
     return letter, code, subcode
+
 
 def get_disease_class(diag_code):
     letter, code, subcode = parse_diag_code(diag_code)
@@ -63,3 +65,17 @@ def get_disease_class(diag_code):
             return i
 
     return "NaN"
+
+
+def df_normalize_state(df):
+    def normalize_state_helper(state):
+        state = str(state)
+        state = state.lower()
+        if "удовлетворит" in state:
+            return "Уд."
+        if "nan" in state:
+            return "Уд."
+        return state
+
+    df.state = df.state.map(lambda x: normalize_state_helper(x))
+    return df
