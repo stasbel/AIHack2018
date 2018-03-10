@@ -1,0 +1,11 @@
+.ipynb_checkpoints/
+submission.csv
+learn/
+test/
+
+test_error.tsv
+time_left.tsv
+learn_error.tsv
+meta.tsv
+catboost_training.json
+tmp
