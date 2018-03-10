@@ -9,3 +9,5 @@ learn_error.tsv
 meta.tsv
 catboost_training.json
 tmp
+__pycache__/
+weights_base_1.best.hdf5

@@ -1,2 +1,4 @@
 # 1. mj
-2. state full inspect
+# 1.5 deal with code
+2. state and other column full inspect
+# 3. выкинуть все что не из теста
