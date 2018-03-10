@@ -3,6 +3,7 @@
 # 2. state and other column full inspect
 # 3. выкинуть все что не из теста
 # 4. stacking
-5. delete features?
+# 4.5 age as int?
+# 5. delete features?
 6. tuning
-7. state заменить удолетворительно
+# 7. state заменить удолетворительно
