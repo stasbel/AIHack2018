@@ -7,3 +7,7 @@
 # 5. delete features?
 6. tuning
 # 7. state заменить удолетворительно
+# 8. null anamnez
+9. lightmgbm
+# 10. трюк с дообучением
+# 11. deal with zeros
