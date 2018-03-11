@@ -13,3 +13,4 @@ __pycache__/
 weights_base_1.best.hdf5
 fold_0_learn/
 fold*
+*.csv
