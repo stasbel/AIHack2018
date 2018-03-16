@@ -1,6 +1,6 @@
 # AIHack2018
 
-AIHack GucciGang team repo
+AIHack team repo
 
 ## Run
 
